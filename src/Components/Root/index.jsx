@@ -4,9 +4,11 @@ import {Outlet} from "react-router-dom";
 
 const Root = () =>{
     return (
-        <NavBar/>,
-        <Outlet/>,
-        <h2>Footer</h2>
+        <>
+            <NavBar/>
+            <Outlet/>
+            <h2>Footer</h2>
+        </>
     )
 }
 export default Root
