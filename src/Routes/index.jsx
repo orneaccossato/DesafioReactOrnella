@@ -7,15 +7,15 @@ import ItemListContainer from "../container/ItemListContainer";
 const router = createBrowserRouter ([
     {
         path: "/",
-        Element: <Root/>,
+        element: <Root/>,
         errorElement: <h1>No encontrado</h1>,
         children: [
             {
-                path: "/",
-                Element: <ItemListContainer/>
+                path: "",
+                element: <ItemListContainer/>
             },{
                 path: "/category/:categoryId",
-                Element: <ItemListContainer/>
+                element: <ItemListContainer/>
             },/*{
                 path: "/detail/:id",
                 Element: <ItemDetailsContainer/>

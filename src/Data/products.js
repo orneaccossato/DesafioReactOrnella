@@ -50,3 +50,10 @@ precio: "$600",
 Image: "https://i.pinimg.com/474x/06/b2/85/06b2850cb38e8a9d639c0a77d0ba1e01.jpg"
 }
 ]
+const getProducts = new Promise ((acc, rej)=> {
+    setTimeout(()=> {
+        acc(products)
+    }, [3000])
+})
+
+export default getProducts;

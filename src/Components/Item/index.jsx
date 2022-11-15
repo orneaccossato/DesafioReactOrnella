@@ -1,11 +1,11 @@
 import React from "react";
 
 const Item= ({ producto }) => {
-    const {id, categoryId, sabor, veggie, precio, image} = producto
     return(
-     <div>
+     <div className="card" style={{ width: '20rem', margin: '.5rem' }}>
         <img src={producto.Image} alt="helado"/>       
-        <p key={producto.id}>{producto.categoryId},{producto.sabor}{producto.veggie}</p>
+        <p key={producto.id}>{producto.categoryId},{producto.sabor}</p>
+        <p key={producto.id}>Apto veggie: {producto.veggie}</p>
      </div>
     )
 }

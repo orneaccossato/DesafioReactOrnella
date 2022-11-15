@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./styles.css";
 import ItemList from "../../Components/ItemList";
-import { data } from "../../Data/products";
+import getProducts from "../../Data/products";
 
 
 /*export default function ItemListContainer ({greeting}){
@@ -15,14 +15,19 @@ import { data } from "../../Data/products";
 const ItemListContainer = ({greeting}) => {
 const [listaProductos, setListaProductos] = useState([]);
 const [loading, setLoading] = useState(true);
-
 useEffect ( () => {
-    data
+    getProducts
     .then((res)=> setListaProductos(res.filter(item => item.categoryId === "barrita helada") ))
     .catch((error)=> console.log (error))
     .finally(()=> setLoading(false));
 }, []);
+console.log (loading);
 return (
+    <div>
+    {loading 
+        ? <h2>Cargando... </h2>
+        : <ItemList listaProductos={listaProductos} />}
+</div>,
     <div>
       <h2>{greeting}</h2>  
     </div>
